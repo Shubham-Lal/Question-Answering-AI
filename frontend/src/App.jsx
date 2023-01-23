@@ -9,6 +9,7 @@ import Typewriter from 'typewriter-effect';
 
 const USER = "user";
 const AI = "ai";
+axios.get(`${import.meta.env.VITE_BACKEND_URL}/`);  // JUST TO MAKE MY SERVER READY
 
 function App() {
   const inputRef = useRef();
