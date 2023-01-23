@@ -44,7 +44,7 @@ a {
     flex-direction: column;
     justify-content: space-between;
     gap: 15px;
-    height: 80vh;
+    height: 90vh;
     width: 100%;
     /* background-color: #f9f8fe; */
     border-bottom-left-radius: 10px;
@@ -63,9 +63,9 @@ a {
         margin-left: -10px;
     }
 
-    .container {
+    /* .container {
         height: auto;
-    }
+    } */
 
     .container .form-center {
         display: flex;
