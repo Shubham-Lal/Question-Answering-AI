@@ -13,6 +13,12 @@ const openai = new OpenAIApi(configuration);
 const app = express();
 app.use(express.json());
 
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    next();
+});
+
 const corsOptions = {
     origin: '*',
     credentials: true,
@@ -40,10 +46,7 @@ app.post("/chat", (req, res) => {
             const array = answer
                 ?.split("\n")
                 ?.filter((value) => value)
-                ?.map(value => value
-                    .replace("?", "")
-                    .replace(",", "")
-                    .trim());
+                ?.map(value => value.trim());
             return array;
         })
         .then((answer) => {
