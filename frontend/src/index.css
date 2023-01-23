@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 3px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background: #CAF1DE;
+    border-radius: 5px;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    padding: 0.25rem 0rem;
+    border-bottom: 1px solid #e6ebf4;
+    background-color: white;
+    display: grid;
+    place-items: center;
+}
+
+.header-img {
+    width: 250px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    height: calc(100vh - 90px);
+    width: 100%;
+    background-color: #f9f8fe;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+}
+
+.chat-input {
+    display: flex;
+}
+
+.chat-input input {
+    flex-grow: 1;
+}
+
+.chat-input button {
+    margin-left: 2px;
+}
+
+.chats {
+    padding: 3px;
+    overflow-y: scroll !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.avtar {
+    height: 40px;
+    margin: 5px 10px 0px 0px;
+    border-radius: 50%;
+    border: 1px solid rgb(211, 203, 203);
+    padding: 2px;
+    background-color: rgb(228, 221, 181);
+}
+
+.chat {
+    display: flex;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    /* width: 90%; */
+    width: fit-content;
+}
+
+.chat p {
+    flex-grow: 1;
+}
+
+.send .avtar {
+    order: 1;
+}
+
+.recieve .avtar {
+    order: 0;
+}
+
+.send {
+    align-self: flex-end;
+    background-color: rgb(245, 242, 214);
+    gap: 10px;
+    word-break: break-word;
+    text-align: justify;
+}
+
+.recieve {
+    background-color: rgb(220, 240, 243);
+    word-break: break-word;
+    text-align: justify;
+}
+
+.message-text {
+    display: flex;
+    flex-direction: column;
+    margin: 1px;
+}
+
+@media (min-width: 1200px) {
+
+    .container {
+        max-width: 50%;
+    }
+}
