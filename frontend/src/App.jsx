@@ -38,7 +38,7 @@ function App() {
               autoStart: true,
               delay: 5,
               deleteSpeed: 3600000,
-              
+
             }}
           />
         </span>
@@ -160,6 +160,7 @@ function App() {
             className="form-control col"
             placeholder={loading ? "Asking..." : "Ask something"}
             value={text}
+            autoFocus={false}
             onChange={(e) => setText(e.target.value)}
           />
           <button disabled={loading} type="submit" className="btn btn-success">
