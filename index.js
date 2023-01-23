@@ -34,13 +34,16 @@ app.post("/chat", (req, res) => {
             temperature: 0,
         })
         .then((response) => {
-            return response?.data?.choices?.[0]?.text;
+            return response.data.choices?.[0].text;
         })
         .then(answer => {
             const array = answer
                 ?.split("\n")
                 ?.filter((value) => value)
-                ?.map(value => value.trim());
+                ?.map(value => value
+                    .replace("?", "")
+                    .replace(",", "")
+                    .trim());
             return array;
         })
         .then((answer) => {

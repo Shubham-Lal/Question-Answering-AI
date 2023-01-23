@@ -112,6 +112,7 @@ a {
     background-color: rgb(220, 240, 243);
     word-break: break-word;
     text-align: justify;
+    height: max-content;
 }
 
 .message-text {

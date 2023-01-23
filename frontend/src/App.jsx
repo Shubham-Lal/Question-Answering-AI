@@ -21,26 +21,44 @@ function App() {
   ]);
   const [loading, setLoading] = useState(false);
 
+  const scrollRef = useRef();
+  const scrollingBottom = () => {
+    const e = scrollRef;
+    e.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "start",
+    });
+  };
+  useEffect(() => {
+    scrollingBottom();
+  });
+
   // DISPLAYING QUESTION & RESULTS
   const renderContent = (qna) => {
     const value = qna.value;
 
     if (Array.isArray(value)) {
-      const typewriter = new Typewriter("", {
-        loop: true,
-        delay: 75,
-      });
       return value.map((v, i) => (
         <span key={i}>
-          <Typewriter
+          {/* <Typewriter
             options={{
               strings: [v.toString()],
               autoStart: true,
-              delay: 5,
+              delay: 1,
               deleteSpeed: 3600000,
-
             }}
-          />
+          /> */}
+          {/* <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .changeDelay(0.01)
+                .typeString(v.toString())
+                .callFunction(scrollingBottom)
+                .start()
+            }}
+          /> */}
+          {v}
         </span>
       ))
     }
@@ -54,6 +72,7 @@ function App() {
   // ASKING QUESTIONS
   const handleSend = (e) => {
     e.preventDefault();
+    inputRef.current.blur();
     const question = text;
     setText("");
     if (question !== "") {
@@ -75,20 +94,6 @@ function App() {
     }
   }
 
-  const scrollRef = useRef();
-  const scrollingBottom = () => {
-    const e = scrollRef;
-    e.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-      inline: "start",
-    });
-  };
-  useEffect(() => {
-    scrollingBottom();
-  });
-
-
   return (
     <>
       <header className="header">
@@ -98,6 +103,7 @@ function App() {
       </header>
       <main className="container">
         <div className="chats scrollbar">
+          <img src={Header} className="header-img" alt="" onClick={scrollingBottom} />
           {
             qna.map((qna, index) => {
               if (qna.from === USER) {
@@ -128,11 +134,6 @@ function App() {
                       renderContent(qna)
                     }
                   </div>
-                  {/* <p>
-                    {
-                      renderContent(qna)
-                    }
-                  </p> */}
                 </div>
               )
             })
@@ -149,6 +150,7 @@ function App() {
                   typewriter.typeString("Typing...").start();
                 }}
               />
+              {/* <p>Typing...</p> */}
             </div>
           )}
           <div ref={scrollRef}></div>
@@ -157,10 +159,10 @@ function App() {
         <form className="chat-input" onSubmit={handleSend}>
           <input
             type="text"
+            ref={inputRef}
             className="form-control col"
             placeholder={loading ? "Asking..." : "Ask something"}
             value={text}
-            autoFocus={false}
             onChange={(e) => setText(e.target.value)}
           />
           <button disabled={loading} type="submit" className="btn btn-success">
