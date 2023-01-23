@@ -102,6 +102,19 @@ function App() {
         </a>
       </header>
       <main className="container">
+        <form className="chat-input" onSubmit={handleSend}>
+          <input
+            type="text"
+            ref={inputRef}
+            className="form-control col"
+            placeholder={loading ? "Asking..." : "Ask something"}
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          />
+          <button disabled={loading} type="submit" className="btn btn-success">
+            {loading ? "Sending..." : "Send"}
+          </button>
+        </form>
         <div className="chats scrollbar">
           {
             qna.map((qna, index) => {
@@ -154,7 +167,7 @@ function App() {
           <div ref={scrollRef}></div>
         </div>
 
-        <form className="chat-input" onSubmit={handleSend}>
+        {/* <form className="chat-input" onSubmit={handleSend}>
           <input
             type="text"
             ref={inputRef}
@@ -166,7 +179,7 @@ function App() {
           <button disabled={loading} type="submit" className="btn btn-success">
             {loading ? "Sending..." : "Send"}
           </button>
-        </form>
+        </form> */}
       </main>
     </>
   )
