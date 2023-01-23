@@ -60,13 +60,21 @@ a {
 @media (max-width: 768px) {
     .form-center {
         position: fixed;
-        width: 90%;
     }
 
     .container {
         height: auto;
+    }
+
+    .container .form-center {
         display: flex;
         align-items: center;
+        justify-content: center;
+        width: 100% !important;
+    }
+
+    .chats {
+        margin-top: 50px;
     }
 }
 
