@@ -103,7 +103,6 @@ function App() {
       </header>
       <main className="container">
         <div className="chats scrollbar">
-          <img src={Header} className="header-img" alt="" onClick={scrollingBottom} />
           {
             qna.map((qna, index) => {
               if (qna.from === USER) {
