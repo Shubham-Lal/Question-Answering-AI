@@ -43,7 +43,7 @@ a {
     flex-direction: column;
     justify-content: space-between;
     gap: 15px;
-    height: calc(100vh - 90px);
+    height: 90vh;
     width: 100%;
     background-color: #f9f8fe;
     border-bottom-left-radius: 10px;
