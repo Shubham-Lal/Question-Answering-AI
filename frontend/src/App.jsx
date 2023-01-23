@@ -150,7 +150,6 @@ function App() {
                   typewriter.typeString("Typing...").start();
                 }}
               />
-              {/* <p>Typing...</p> */}
             </div>
           )}
           <div ref={scrollRef}></div>
