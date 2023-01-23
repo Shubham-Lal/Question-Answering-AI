@@ -57,9 +57,10 @@ a {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 568px) {
     .form-center {
         position: fixed;
+        margin-left: -10px;
     }
 
     .container {
