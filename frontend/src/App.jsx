@@ -9,9 +9,9 @@ import Typewriter from 'typewriter-effect';
 
 const USER = "user";
 const AI = "ai";
-axios.get(`${import.meta.env.VITE_BACKEND_URL}/`);  // JUST TO MAKE MY SERVER READY
 
 function App() {
+  axios.get(`${import.meta.env.VITE_BACKEND_URL}/`);  // JUST TO MAKE MY SERVER READY
   const inputRef = useRef();
   const [text, setText] = useState("");
   const [qna, setQna] = useState([
