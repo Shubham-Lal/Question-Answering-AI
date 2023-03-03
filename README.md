@@ -8,6 +8,7 @@ Question Answering AI Tool is Powerful Query replying tool powered by OPENAI and
 
 ### Feel free to fork this repo and add some new features to it.
 
+### Detailed set-up for both Frontend & Backend documented [here](https://github.com/CERTIFIED2003/question-answering-ai/issues/1).
 # Setup
 
 Step 1: Clone or Fork this repo.
