@@ -1,5 +1,7 @@
 # Image Generator AI
 
+![](https://media.licdn.com/dms/image/C562DAQFZAz_SkntVYA/profile-treasury-image-shrink_800_800/0/1676553365612?e=1678903200&v=beta&t=cGduW4OBC27qi54IEKxCKc3qzEsaHxPVF4_ckeoQgko)
+
 <a href="https://question-answer.pages.dev/" target="_blank" style="background: #fff !important; height: 40px !important;width: 140px !important;">Live Site</a>
 
 Question Answering AI Tool is Powerful Query replying tool powered by OPENAI and can be explicitly used to answer your questions.
