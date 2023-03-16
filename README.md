@@ -1,4 +1,4 @@
-# Image Generator AI
+# Questions Answering AI
 
 ![](https://media.licdn.com/dms/image/C562DAQFZAz_SkntVYA/profile-treasury-image-shrink_800_800/0/1676553365612?e=1678903200&v=beta&t=cGduW4OBC27qi54IEKxCKc3qzEsaHxPVF4_ckeoQgko)
 
@@ -43,3 +43,6 @@ NODE_VERSION = 16.14.1 (Optional)
 ```
 
 Step 9: After adding the above mentioned variable to your .env file execute `yarn dev` command. This will start local frontend server on your local area network.
+
+### Snapshot of the application
+![Project16](https://user-images.githubusercontent.com/111045472/225552712-b18db212-cfe5-4d44-bbcb-bba1fc3fcdb9.png)
